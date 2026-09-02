@@ -6,3 +6,8 @@ __pycache__/
 
 .DS_Store
 Thumbs.db
+
+sample_image.png
+
+models/best_fashion_mnist_cnn_batchnorm.keras
+models/fashion_mnist_cnn_batchnorm.keras

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import keras
 
-from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
+from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix, classification_report
 from cnn_data_loader import load_cnn_data
 
 class_names = [
@@ -33,6 +33,14 @@ predictions = np.argmax(
     probabilities,
     axis=1
 )
+
+report = classification_report(
+    y_test,
+    predictions,
+    target_names=class_names
+
+)
+print(report)
 
 cm = confusion_matrix(
     y_test,
